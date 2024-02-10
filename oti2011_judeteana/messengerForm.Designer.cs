@@ -35,6 +35,8 @@
             loadBtn = new Button();
             displaymsgRtb = new RichTextBox();
             entermsgRtb = new RichTextBox();
+            openFileDialog1 = new OpenFileDialog();
+            saveFileDialog1 = new SaveFileDialog();
             SuspendLayout();
             // 
             // ionelBtn
@@ -45,7 +47,7 @@
             ionelBtn.TabIndex = 0;
             ionelBtn.Text = "Ionel";
             ionelBtn.UseVisualStyleBackColor = true;
-            
+            ionelBtn.Click += ionelBtn_Click;
             // 
             // mariaBtn
             // 
@@ -55,6 +57,7 @@
             mariaBtn.TabIndex = 1;
             mariaBtn.Text = "Maria";
             mariaBtn.UseVisualStyleBackColor = true;
+            mariaBtn.Click += mariaBtn_Click;
             // 
             // deleteBtn
             // 
@@ -64,6 +67,7 @@
             deleteBtn.TabIndex = 2;
             deleteBtn.Text = "Sterge fereastra mesaje";
             deleteBtn.UseVisualStyleBackColor = true;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // saveBtn
             // 
@@ -73,6 +77,7 @@
             saveBtn.TabIndex = 3;
             saveBtn.Text = "Salveaza mesaje";
             saveBtn.UseVisualStyleBackColor = true;
+            saveBtn.Click += saveBtn_Click;
             // 
             // loadBtn
             // 
@@ -82,6 +87,7 @@
             loadBtn.TabIndex = 4;
             loadBtn.Text = "Incarcare mesaje";
             loadBtn.UseVisualStyleBackColor = true;
+            loadBtn.Click += loadBtn_Click;
             // 
             // displaymsgRtb
             // 
@@ -98,6 +104,15 @@
             entermsgRtb.Size = new Size(542, 70);
             entermsgRtb.TabIndex = 6;
             entermsgRtb.Text = "";
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "Rich Text Format|*.rtf";
+            // 
+            // saveFileDialog1
+            // 
+            saveFileDialog1.Filter = "Rich Text Format|*.rtf";
             // 
             // messengerForm
             // 
@@ -125,5 +140,7 @@
         private Button loadBtn;
         private RichTextBox displaymsgRtb;
         private RichTextBox entermsgRtb;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }
